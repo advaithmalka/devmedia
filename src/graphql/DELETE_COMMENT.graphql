@@ -1,0 +1,12 @@
+mutation deleteComment($postID: ID!, $commentID: ID!) {
+	deleteComment(postID: $postID, commentID: $commentID) {
+		id
+		countComments
+		comments {
+			id
+			username
+			dateCreated
+			text
+		}
+	}
+}

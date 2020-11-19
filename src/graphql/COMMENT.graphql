@@ -1,0 +1,12 @@
+mutation comment($postID: ID!, $text: String!) {
+	comment(postID: $postID, text: $text) {
+		id
+		countComments
+		comments {
+			id
+			dateCreated
+			text
+			username
+		}
+	}
+}

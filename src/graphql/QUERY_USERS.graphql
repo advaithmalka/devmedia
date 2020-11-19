@@ -1,0 +1,15 @@
+query queryUsers($username: String!) {
+	queryUsers(username: $username) {
+		id
+		username
+		email
+		bio
+		dateCreated
+		profileImg
+		followers {
+			username
+			id
+			profileImg
+		}
+	}
+}

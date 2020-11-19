@@ -1,0 +1,10 @@
+mutation like($ID: ID!) {
+	like(postID: $ID) {
+		id
+		likes {
+			id
+			username
+		}
+		countLikes
+	}
+}

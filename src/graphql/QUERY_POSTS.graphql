@@ -1,0 +1,21 @@
+query queryPosts($username: String) {
+	queryPosts(username: $username) {
+		id
+		title
+		img
+		description
+		username
+		comments {
+			username
+			text
+		}
+		likes {
+			dateCreated
+			id
+			username
+		}
+		countLikes
+		countComments
+		dateCreated
+	}
+}

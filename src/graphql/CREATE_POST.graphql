@@ -1,0 +1,21 @@
+mutation createPost($title: String!, $description: String!, $img: String) {
+	createPost(title: $title, description: $description, img: $img) {
+		id
+		username
+		img
+		description
+		dateCreated
+		countLikes
+		likes {
+			id
+			username
+			dateCreated
+		}
+		comments {
+			id
+			username
+			dateCreated
+			text
+		}
+	}
+}

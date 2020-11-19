@@ -1,0 +1,23 @@
+query queryPost($ID: ID!) {
+	queryPost(id: $ID) {
+		id
+		dateCreated
+		username
+		description
+		img
+		title
+		countComments
+		countLikes
+		comments {
+			id
+			username
+			text
+			dateCreated
+			profileImg
+		}
+		likes {
+			username
+			id
+		}
+	}
+}

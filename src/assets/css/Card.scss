@@ -1,0 +1,118 @@
+$color-header: #0d0d0d;
+$color-text: #404040;
+$transition: 0.2s;
+$btn-grad: linear-gradient(155deg, #00b7ff 0%, #1a4fff 100%);
+.lit-card {
+	transition: $transition;
+	padding: 0px 0px;
+	box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+	&-img {
+		display: block;
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	&-pfp {
+		display: block;
+		width: 300px;
+		margin-left: 30px;
+		margin-top: 30px;
+		border-radius: 50%;
+		object-fit: cover;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	&-body {
+		padding: 10px 20px;
+	}
+
+	&-title {
+		font-size: 24px;
+		font-weight: 500;
+		color: $color-header;
+		margin-bottom: 24px;
+	}
+
+	&-btn {
+		outline: none !important;
+		border: none !important;
+		width: 100%;
+		display: block;
+		// background: linear-gradient(to right, #ff512f 0%, #f09819 100%);
+		background: $btn-grad;
+		padding: 12px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.2s;
+		color: white;
+
+		border-radius: 10px;
+		display: block;
+		&:hover {
+			color: white;
+			box-shadow: 3px 3px 2px #33333327;
+			filter: brightness(1.1);
+			text-decoration: none;
+		}
+	}
+}
+.lit-pfp {
+	transition: $transition;
+	padding: 0px 0px;
+	box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	max-width: 800px;
+	margin: auto;
+	&-img {
+		display: block;
+
+		max-width: 200px;
+		// min-width: 50px;
+		height: 200px;
+		margin: 20px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&-body {
+		padding: 10px 20px;
+		height: 100%;
+	}
+
+	&-title {
+		font-size: 35px;
+		font-weight: 500;
+		color: $color-header;
+		margin-top: 24px;
+	}
+
+	&-btn {
+		outline: none !important;
+		border: none !important;
+		width: 100%;
+		display: block;
+		// background: linear-gradient(to right, #ff512f 0%, #f09819 100%);
+		background: $btn-grad;
+		padding: 12px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.2s;
+		color: white;
+
+		border-radius: 10px;
+		display: block;
+		&:hover {
+			color: white;
+			box-shadow: 3px 3px 2px #33333327;
+			filter: brightness(1.1);
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+mutation follow($userID: ID!) {
+	follow(userID: $userID) {
+		id
+		followers {
+			username
+			profileImg
+		}
+	}
+}
