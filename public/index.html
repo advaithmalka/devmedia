@@ -34,7 +34,26 @@
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+		-->
+		<script type="text/javascript">
+			(function ({ search, pathname, hash }) {
+				if (search[1] === "/") {
+					window.history.replaceState(
+						null,
+						null,
+						pathname.slice(0, -1) +
+							search
+								.slice(1)
+								.split("&")
+								.map(function (s) {
+									return s.replace(/~and~/g, "&");
+								})
+								.join("?") +
+							hash
+					);
+				}
+			})(window.location);
+		</script>
 		<title>DevMedia</title>
 	</head>
 	<body>
@@ -51,7 +70,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
 		-->
 	</body>
-	<script>
-		fetch("https://devmedia-server.herokuapp.com/");
-	</script>
 </html>

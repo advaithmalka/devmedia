@@ -41,6 +41,10 @@ function HomeRoute({ ...routeProps }) {
 }
 
 const App = (props: any) => {
+	// @ts-ignore
+	fetch(process.env.REACT_APP_SERVER_URI).then((e) =>
+		console.log("Fetched server")
+	);
 	return (
 		<AuthProvider>
 			<div className="app">
