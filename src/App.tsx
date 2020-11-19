@@ -44,7 +44,7 @@ const App = (props: any) => {
 	return (
 		<AuthProvider>
 			<div className="app">
-				<Router>
+				<Router basename={process.env.PUBLIC_URL}>
 					<NavbarTop {...props} />
 					<Switch>
 						<HomeRoute
