@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { AuthContext } from "../context";
 import { useQuery } from "@apollo/client";
 import { loader } from "graphql.macro";
@@ -23,9 +23,12 @@ const Profile = ({ match }: { match: any }) => {
 	}: { user: User | null; logoutUser: any } = useContext(AuthContext);
 
 	const history = useHistory();
-
+	const editProfileIcon = document.getElementById("edit-profile-icon");
 	useEffect(() => {
 		document.title = `${match.params.username} | Profile`;
+		if (localStorage.getItem("dm") && editProfileIcon) {
+			editProfileIcon!.classList.add("svg-fill-white");
+		}
 	});
 
 	const { data, loading, refetch: refetchUser } = useQuery(QUERY_USERS, {
@@ -109,6 +112,7 @@ const Profile = ({ match }: { match: any }) => {
 									authUser!.username && (
 									<Tippy content="Edit profile">
 										<img
+											id="edit-profile-icon"
 											className="float-right mr-3 mt-3"
 											width={25}
 											src={EditIcon}

@@ -55,6 +55,18 @@ const EditProfileModal = ({
 			}
 		});
 	};
+	const [dm, setDm] = useState(localStorage.getItem("dm") !== null);
+
+	const dmHandler = (e: any) => {
+		setDm(e.target.checked);
+		if (e.target.checked) {
+			localStorage.setItem("dm", "true");
+			document.body.classList.add("dark-mode");
+		} else {
+			localStorage.removeItem("dm");
+			document.body.classList.remove("dark-mode");
+		}
+	};
 	return (
 		<Modal
 			show={show}
@@ -156,6 +168,17 @@ const EditProfileModal = ({
 								}
 								onChange={handleChange}
 							/>
+							<p id="dm-label">Dark mode</p>
+
+							<label className="switch">
+								<input
+									type="checkbox"
+									onChange={dmHandler}
+									checked={dm}
+								/>
+								<span className="slider"></span>
+							</label>
+
 							<div className="text-center mt-3">
 								<p className="text-center text-danger mt-3">
 									{errors}

@@ -159,3 +159,70 @@
 		background-color: #ff504a !important;
 	}
 }
+
+$dm-col: #1b1b1b;
+body.dark-mode {
+	background-color: #0c0c0c;
+	.spinner-border {
+		color: white;
+	}
+	.lit-card {
+		background-color: $dm-col;
+		color: white !important;
+		&-title {
+			color: white !important;
+		}
+		&-body {
+			color: white !important;
+			* {
+				color: white !important;
+			}
+		}
+	}
+	.lit-pfp {
+		background-color: $dm-col;
+		color: white !important;
+		.lit-pfp-title {
+			color: white !important;
+		}
+		pre {
+			color: white !important;
+		}
+	}
+	.comment {
+		background-color: $dm-col;
+		box-shadow: none !important;
+		color: white !important;
+	}
+	div.group.animate__animated.animate__fadeIn {
+		color: white;
+		box-shadow: none !important;
+		background-color: $dm-col;
+	}
+	.modal label,
+	.modal #dm-label {
+		color: black !important;
+	}
+	.landing-welcome,
+	.landing-features {
+		.lit-card {
+			color: black !important;
+			&-title {
+				color: black !important;
+			}
+			&-body {
+				color: black !important;
+				* {
+					color: black !important;
+				}
+			}
+		}
+	}
+	h2 {
+		color: white !important;
+	}
+	h3,
+	h4 {
+		color: black !important;
+	}
+}

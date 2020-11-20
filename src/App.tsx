@@ -45,6 +45,9 @@ const App = (props: any) => {
 	fetch(process.env.REACT_APP_SERVER_URI).then((e) =>
 		console.log("Fetched server")
 	);
+	if (localStorage.getItem("dm")) {
+		document.body.classList.add("dark-mode");
+	}
 	return (
 		<AuthProvider>
 			<div className="app">
