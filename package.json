@@ -2,7 +2,7 @@
   "name": "devmedia",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://advaithm26.github.io/devmedia/",
+  "homepage": "https://advaithmalka.github.io/devmedia/",
   "dependencies": {
     "@apollo/client": "^3.2.5",
     "@popperjs/core": "^2.5.4",
